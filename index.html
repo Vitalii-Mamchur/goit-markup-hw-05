@@ -63,9 +63,9 @@
           <button class="btn .title" data-modal-open>Заказать услугу</button>
           <div data-backdrop class="backdrop is-hidden" data-modal>
             <div class="modal">
-              <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
               <form class="form">
-        
+                <button type="button" class="form-btn" data-modal-close></button>
+                <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
                 <div class="form-field">
                   <input type="text" class="form-input" name="name" id="name" placeholder=" " />
                   <label for="name" class="form-label">Имя</label>
@@ -100,7 +100,7 @@
                   <span class="checkbox-icon"></span>
                   <span class="checkbox-label">Соглашаюсь с рассылкой и принимаю <a class="contract" href="#">Условия договора</a></span>
                 </label>
-                <button type="submit" class="form-btn" data-modal-close>Отправить</button>
+                <button type="submit" class="submit-btn" data-modal-close>Отправить</button>
               </form>
             </div>
           </div>
