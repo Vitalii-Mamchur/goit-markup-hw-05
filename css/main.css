@@ -62,17 +62,6 @@ body {
     text-transform: uppercase;
 }
 
-.visually-hidden{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect( 0 0 0 0 );
-    overflow: hidden;
-}
-
     /* Хедер */
 
 .main-nav{
@@ -288,6 +277,7 @@ body {
 
 .form-comment{
     position: relative;
+    margin-bottom: 20px;
 }
 
 .comment{
@@ -313,17 +303,6 @@ body {
 
 .form-comment:focus-within .comment{
     border: 1px solid var(--accent-color);
-}
-
-.checkbox{
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-.form-label-checkbox{
-    position: absolute;
-    top: 12px;
-    left: 16px;
 }
 
 .form-label{
@@ -374,7 +353,7 @@ body {
     fill: var(--accent-color);
 }
 
-.checkbox-field,
+/* .checkbox-field,
 .checkbox-label{
     display: inline-flex;
     align-items: center;
@@ -387,14 +366,46 @@ body {
     height: 15px;
     background-image: url("../img/sprite-2.svg#icon");
 
+} */
+.checkbox{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect( 0 0 0 0 );
+    overflow: hidden;
+}
+
+.checkbox-field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkbox-icon{
+    display: inline-block;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    margin-right: 10px;
+    
+    border: 2px solid var(--title-text-color);
+    border-radius: 4px;
 }
 
 .checkbox-label{
-    width: 16px;
-    height: 15px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.checkbox:checked + .checkbox-icon{
+    border-color: transparent;
+    background-image: url(../img/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
 }
   
 .contract{
