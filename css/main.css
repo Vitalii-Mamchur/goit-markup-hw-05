@@ -288,12 +288,16 @@ body {
     border-radius: 4px;
     padding: 12px 16px;
     outline: none;
+
+    transition: border var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label-comment{
     position: absolute;
     top: 12px;
     left: 16px;
+
+    transition: transform var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1), color var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-comment:focus-within .form-label-comment{
@@ -309,7 +313,9 @@ body {
     position: absolute;
     left: 42px;
     top: 50%;
+
     transform: translateY(-50%);
+    transition: transform var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .form-input{
@@ -320,15 +326,11 @@ body {
     margin: 0;
     padding-left: 46px;
     outline: none;
-
-    transition: transform 500ms ease;
+    transition: border var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .form-input:focus{
     border: 1px solid var(--accent-color);
-    background-color: #fff;
-
-    transition: transform 500ms ease;
 }
   
   
@@ -341,32 +343,19 @@ body {
     position: absolute;
     top: 50%;
     left: 16px;
-  
-    transform: translateY(-50%);
-  
+    
     display: inline-block;
     width: 18px;
     height: 18px;
+
+    transform: translateY(-50%);
+    transition: fill var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .form-input:focus ~ .form-icon{
     fill: var(--accent-color);
 }
 
-/* .checkbox-field,
-.checkbox-label{
-    display: inline-flex;
-    align-items: center;
-}
-
-.checkbox ~ .checkbox-label::before{
-    content: "";
-    display: block;
-    width: 16px;
-    height: 15px;
-    background-image: url("../img/sprite-2.svg#icon");
-
-} */
 .checkbox{
     position: absolute;
     width: 1px;
@@ -412,6 +401,30 @@ body {
     color: var(--accent-color);
       
 }
+
+.form-btn{
+    color: var(--btn-txt-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    background-color: var(--accent-color);
+    cursor: pointer;
+  
+    min-width: 200px;
+    min-height: 50px;
+    border: 1px transparent;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:hover,
+.form-btn:focus{
+    background-color: #188CE8;
+}
+
     /* Преимущества */
 
 .advantages{
