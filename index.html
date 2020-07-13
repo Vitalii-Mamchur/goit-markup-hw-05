@@ -64,12 +64,16 @@
           <div data-backdrop class="backdrop is-hidden" data-modal>
             <div class="modal">
               <form class="form">
-                <button type="button" class="form-btn" data-modal-close></button>
+                <button type="button" class="form-btn" data-modal-close>
+                  <svg class="close">
+                    <use href="../img/sprite-2.svg#close"></use>
+                  </svg>
+                </button>
                 <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
                 <div class="form-field">
                   <input type="text" class="form-input" name="name" id="name" placeholder=" " />
                   <label for="name" class="form-label">Имя</label>
-                  <svg class="form-icon">
+                  <svg class="form-icon" width="12" height="12">
                     <use href="./img/sprite-2.svg#modal-svg-1"></use>
                   </svg> 
                 </div>
@@ -91,7 +95,7 @@
                 </div>
 
                 <div class="form-comment">
-                  <textarea class="comment" name="comment" id="comment" cols=30 rows="10"></textarea>
+                  <textarea class="comment" name="comment" id="comment" placeholder=" "></textarea>
                   <label for="mail" class="form-label-comment">Комментарий</label>
                 </div>
 
@@ -438,16 +442,18 @@
           </section>
           <div class="mailing">
             <b class="txt">Подпишитесь на рассылку</b>
-            <div class="footer-form-field">
-              <label for="footer-mail" class="footer-form-label">E-mail</label>
-              <input type="email" class="footer-form-input" name="footer-mail" id="footer-mail" placeholder="E-mail" />
+            <div class="mailing-flex">
+              <div class="footer-form-field">
+                <label for="footer-form-mail" class="footer-form-label"></label>
+                <input type="email" class="footer-form-input" name="footer-mail" id="footer-mail" placeholder="E-mail" />
+              </div>
+              <button type="submit" class="btn title">
+                Подписаться 
+                <svg class="mailing-btn-svg" width="24" height="24">
+                  <use href="./img/sprite.svg#icon_send"></use>
+                </svg>
+              </button>
             </div>
-            <button type="submit" class="btn title">
-              Подписаться 
-              <svg class="mailing-btn-svg" width="24" height="24">
-                <use href="./img/sprite.svg#icon_send"></use>
-              </svg>
-            </button>
           </div>
         </div>
         <p class="copy container">2020 | Developed by GoIT Students </p>

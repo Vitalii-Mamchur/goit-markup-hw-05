@@ -280,13 +280,33 @@ body {
 
 .form-btn{
     position: absolute;
-    top: 0;
-    left: 0;
+    padding: 0;
+    margin: 0;
+    top: -32px;
+    left: calc(100% + 32px);
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--btn-txt-color);
+
+    transform: translateX(-100%);
 }
-  
+
+.close{
+    display: block;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    fill: var(--logo-color);
+
+    transition: fill var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:focus,
+.form-btn:hover .close{
+    fill: var(--accent-color);
+}
 
 .form-comment{
     position: relative;
@@ -295,7 +315,7 @@ body {
 
 .comment{
     width: 100%;
-    max-height: 120px;
+    min-height: 120px;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -310,7 +330,7 @@ body {
     transition: transform var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1), color var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-comment:focus-within .form-label-comment{
+.comment:focus + .form-label-comment, .comment:not(:placeholder-shown) + .form-label-comment{
     transform: translateY(-34px);
     color: var(--accent-color);
 }
@@ -351,7 +371,7 @@ body {
     transition: fill var(--transition-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
   
-.form-input:focus ~ .form-icon{
+.form-input:focus ~ .form-icon, .form-input:not(:placeholder-shown) ~ .form-icon{
     fill: var(--accent-color);
 }
 
@@ -772,7 +792,28 @@ body {
 }
 
 .mailing{
+    display: block;
     margin-left: auto;
+}
+
+.mailing-flex{
+    display: flex;
+}
+
+.footer-form-input{
+    min-width: 358px;
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 12px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--btn-txt-color);
 }
 
 .mailing-btn-svg{
